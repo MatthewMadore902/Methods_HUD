@@ -33,6 +33,7 @@ namespace Methods_HUD
 
 			ShowHUD();
 
+
 			// Initialize
 			score = 0;
 			name = "Madore902";
