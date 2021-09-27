@@ -13,6 +13,7 @@ namespace Methods_HUD
 		static string name;
 		static int xp;
 		static int gold;
+		static int health;
 		//Method that shows the hud
 		static void ShowHUD()
 		{
@@ -21,10 +22,17 @@ namespace Methods_HUD
 			Console.WriteLine("name = " + name);
 			Console.WriteLine("xp = " + xp);
 			Console.WriteLine("Gold = " + gold);
+			Console.WriteLine("Health = " + health);
 			Console.WriteLine("======================================");
 			Console.WriteLine("");
 		}
 
+		static void TakeDamage(int damage)
+		{
+			
+			health = health - damage;
+		
+		}
 
 		static void Main(string[] args)
 		{
@@ -39,6 +47,7 @@ namespace Methods_HUD
 			name = "Madore902";
 			xp = 0;
 			gold = 0;
+			health = 100;
 
 
 
@@ -48,12 +57,14 @@ namespace Methods_HUD
 			xp = xp + 50;
 			gold = gold + 150;
 
+			TakeDamage(25);
 			ShowHUD();
 
 			score = score + 100;
 			xp = xp + 50;
 			gold = gold + 150;
 
+			TakeDamage(12);
 			ShowHUD();
 
 			Console.ReadKey(true);
